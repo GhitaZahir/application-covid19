@@ -51,6 +51,9 @@
             this.doute.Font = new System.Drawing.Font("Sitka Small", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.doute.ForeColor = System.Drawing.Color.Black;
             this.doute.FormattingEnabled = true;
+            this.doute.Items.AddRange(new object[] {
+            "Avoir les symptômes",
+            "Contaminé par un malade"});
             this.doute.Location = new System.Drawing.Point(191, 31);
             this.doute.Name = "doute";
             this.doute.Size = new System.Drawing.Size(169, 26);
@@ -166,7 +169,7 @@
             this.enregistrer.TabIndex = 5;
             this.enregistrer.Text = "enregistrer";
             this.enregistrer.UseVisualStyleBackColor = false;
-            this.enregistrer.Click += new System.EventHandler(this.enregistrer_Click);
+            this.enregistrer.Click += new System.EventHandler(this.Enregistrer_Click);
             // 
             // label4
             // 

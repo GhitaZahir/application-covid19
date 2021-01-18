@@ -169,6 +169,7 @@
             this.label5.Size = new System.Drawing.Size(239, 28);
             this.label5.TabIndex = 0;
             this.label5.Text = "Formulaire de vaccin :";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // panel1
             // 
@@ -187,6 +188,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(377, 265);
             this.panel1.TabIndex = 1;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // label3
             // 

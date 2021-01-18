@@ -54,6 +54,7 @@ namespace application_covid19
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.reinitialiser = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -160,7 +161,6 @@ namespace application_covid19
             this.cin.Name = "cin";
             this.cin.Size = new System.Drawing.Size(169, 26);
             this.cin.TabIndex = 5;
-            this.cin.TextChanged += new System.EventHandler(this.cin_TextChanged);
             // 
             // zone
             // 
@@ -279,13 +279,13 @@ namespace application_covid19
             this.enregistrer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.enregistrer.Font = new System.Drawing.Font("Sitka Small", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.enregistrer.ForeColor = System.Drawing.Color.White;
-            this.enregistrer.Location = new System.Drawing.Point(72, 429);
+            this.enregistrer.Location = new System.Drawing.Point(15, 429);
             this.enregistrer.Name = "enregistrer";
             this.enregistrer.Size = new System.Drawing.Size(121, 47);
             this.enregistrer.TabIndex = 5;
             this.enregistrer.Text = "enregistrer";
             this.enregistrer.UseVisualStyleBackColor = false;
-            this.enregistrer.Click += new System.EventHandler(this.enregistrer_Click);
+            this.enregistrer.Click += new System.EventHandler(this.Enregistrer_Click);
             // 
             // panel1
             // 
@@ -347,7 +347,7 @@ namespace application_covid19
             this.reinitialiser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.reinitialiser.Font = new System.Drawing.Font("Sitka Small", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.reinitialiser.ForeColor = System.Drawing.Color.White;
-            this.reinitialiser.Location = new System.Drawing.Point(315, 429);
+            this.reinitialiser.Location = new System.Drawing.Point(370, 429);
             this.reinitialiser.Name = "reinitialiser";
             this.reinitialiser.Size = new System.Drawing.Size(120, 47);
             this.reinitialiser.TabIndex = 5;
@@ -355,11 +355,27 @@ namespace application_covid19
             this.reinitialiser.UseVisualStyleBackColor = false;
             this.reinitialiser.Click += new System.EventHandler(this.reinitialiser_Click);
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Sitka Small", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(191, 429);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(120, 47);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "Info de zone";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.infoZone_Click);
+            // 
             // citoyenControle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.reinitialiser);
             this.Controls.Add(this.enregistrer);
@@ -375,10 +391,6 @@ namespace application_covid19
 
         }
 
-        private void cin_TextChanged(object sender, EventArgs e)
-        {
-            throw new NotImplementedException();
-        }
 
         #endregion
 
@@ -405,5 +417,6 @@ namespace application_covid19
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button reinitialiser;
+        private System.Windows.Forms.Button button1;
     }
 }

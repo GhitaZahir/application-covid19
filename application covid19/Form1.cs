@@ -15,7 +15,7 @@ namespace application_covid19
         public Form1()
         {
             InitializeComponent();
-            citoyen.BringToFront();
+            citoyenControle1.BringToFront();
         }
 
 
@@ -24,8 +24,8 @@ namespace application_covid19
             testControle1.Hide();
             hospitalisationControle1.Hide();
             vaccinControle1.Hide();
-            carteControle1.Hide();
-            listeControle1.Hide();
+            //carteControle1.Hide();
+            //listeControle1.Hide();
             citoyenControle1.Show();
             citoyen.BringToFront();
         }
@@ -35,8 +35,8 @@ namespace application_covid19
             citoyenControle1.Hide();
             hospitalisationControle1.Hide();
             vaccinControle1.Hide();
-            carteControle1.Hide();
-            listeControle1.Hide();
+            //carteControle1.Hide();
+            //listeControle1.Hide();
             testControle1.Show();
             testControle1.BringToFront();
         }
@@ -57,8 +57,8 @@ namespace application_covid19
             testControle1.Hide();
             citoyenControle1.Hide();
             vaccinControle1.Hide();
-            carteControle1.Hide();
-            listeControle1.Hide();
+            //carteControle1.Hide();
+            //listeControle1.Hide();
             hospitalisationControle1.Show();
             hospitalisationControle1.BringToFront();
         }
@@ -68,32 +68,26 @@ namespace application_covid19
             testControle1.Hide();
             citoyenControle1.Hide();
             hospitalisationControle1.Hide();
-            carteControle1.Hide();
-            listeControle1.Hide();
+            //carteControle1.Hide();
+            //listeControle1.Hide();
             vaccinControle1.Show();
             vaccinControle1.BringToFront();
         }
 
         private void carte_Click(object sender, EventArgs e)
         {
-            testControle1.Hide();
-            citoyenControle1.Hide();
-            hospitalisationControle1.Hide();
-            vaccinControle1.Hide();
-            listeControle1.Hide();
-            carteControle1.Show();
-            carteControle1.BringToFront();
+            
+            carteForm form2 = new carteForm(); 
+            form2.Show();
+            
         }
 
-        private void liste_Click(object sender, EventArgs e)
+        
+
+        private void Form1_Load(object sender, EventArgs e)
         {
-            testControle1.Hide();
-            citoyenControle1.Hide();
-            hospitalisationControle1.Hide();
-            vaccinControle1.Hide();
-            carteControle1.Hide();
-            listeControle1.Show();
-            listeControle1.BringToFront();
+            this.CenterToScreen();
+
         }
     }
 }

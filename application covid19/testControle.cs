@@ -17,7 +17,7 @@ namespace application_covid19
             InitializeComponent();
         }
 
-        private void enregistrer_Click(object sender, EventArgs e)
+        private void Enregistrer_Click(object sender, EventArgs e)
         {
             SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-3ILBI45\SQLEXPRESS;Initial Catalog=covid19;Integrated Security=True;");
             con.Open();

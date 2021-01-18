@@ -36,13 +36,11 @@
             this.hospitalisation = new System.Windows.Forms.Button();
             this.vaccin = new System.Windows.Forms.Button();
             this.carte = new System.Windows.Forms.Button();
-            this.liste = new System.Windows.Forms.Button();
             this.close = new System.Windows.Forms.PictureBox();
             this.citoyenControle1 = new application_covid19.citoyenControle();
             this.testControle1 = new application_covid19.testControle();
             this.hospitalisationControle1 = new application_covid19.hospitalisationControle();
             this.vaccinControle1 = new application_covid19.vaccinControle();
-            this.carteControle1 = new application_covid19.carteControle();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.close)).BeginInit();
@@ -59,7 +57,6 @@
             this.panel1.Controls.Add(this.hospitalisation);
             this.panel1.Controls.Add(this.vaccin);
             this.panel1.Controls.Add(this.carte);
-            this.panel1.Controls.Add(this.liste);
             this.panel1.Location = new System.Drawing.Point(1, -1);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(175, 602);
@@ -140,19 +137,6 @@
             this.carte.UseVisualStyleBackColor = true;
             this.carte.Click += new System.EventHandler(this.carte_Click);
             // 
-            // liste
-            // 
-            this.liste.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.liste.Font = new System.Drawing.Font("Sitka Small", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.liste.ForeColor = System.Drawing.Color.White;
-            this.liste.Location = new System.Drawing.Point(-2, 465);
-            this.liste.Name = "liste";
-            this.liste.Size = new System.Drawing.Size(174, 70);
-            this.liste.TabIndex = 5;
-            this.liste.Text = "Liste et statistiques";
-            this.liste.UseVisualStyleBackColor = true;
-            this.liste.Click += new System.EventHandler(this.liste_Click);
-            // 
             // close
             // 
             this.close.BackColor = System.Drawing.Color.Transparent;
@@ -168,7 +152,7 @@
             // citoyenControle1
             // 
             this.citoyenControle1.BackColor = System.Drawing.Color.Transparent;
-            this.citoyenControle1.Location = new System.Drawing.Point(258, 14);
+            this.citoyenControle1.Location = new System.Drawing.Point(267, 31);
             this.citoyenControle1.Name = "citoyenControle1";
             this.citoyenControle1.Size = new System.Drawing.Size(504, 487);
             this.citoyenControle1.TabIndex = 4;
@@ -176,7 +160,7 @@
             // testControle1
             // 
             this.testControle1.BackColor = System.Drawing.Color.Transparent;
-            this.testControle1.Location = new System.Drawing.Point(258, 9);
+            this.testControle1.Location = new System.Drawing.Point(267, 31);
             this.testControle1.Name = "testControle1";
             this.testControle1.Size = new System.Drawing.Size(504, 487);
             this.testControle1.TabIndex = 5;
@@ -184,7 +168,7 @@
             // hospitalisationControle1
             // 
             this.hospitalisationControle1.BackColor = System.Drawing.Color.Transparent;
-            this.hospitalisationControle1.Location = new System.Drawing.Point(258, 14);
+            this.hospitalisationControle1.Location = new System.Drawing.Point(267, 31);
             this.hospitalisationControle1.Name = "hospitalisationControle1";
             this.hospitalisationControle1.Size = new System.Drawing.Size(504, 487);
             this.hospitalisationControle1.TabIndex = 6;
@@ -192,18 +176,10 @@
             // vaccinControle1
             // 
             this.vaccinControle1.BackColor = System.Drawing.Color.Transparent;
-            this.vaccinControle1.Location = new System.Drawing.Point(240, 14);
+            this.vaccinControle1.Location = new System.Drawing.Point(267, 31);
             this.vaccinControle1.Name = "vaccinControle1";
             this.vaccinControle1.Size = new System.Drawing.Size(504, 487);
             this.vaccinControle1.TabIndex = 7;
-            // 
-            // carteControle1
-            // 
-            this.carteControle1.BackColor = System.Drawing.Color.Transparent;
-            this.carteControle1.Location = new System.Drawing.Point(258, 14);
-            this.carteControle1.Name = "carteControle1";
-            this.carteControle1.Size = new System.Drawing.Size(504, 487);
-            this.carteControle1.TabIndex = 8;
             // 
             // Form1
             // 
@@ -211,7 +187,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(890, 533);
-            this.Controls.Add(this.carteControle1);
             this.Controls.Add(this.vaccinControle1);
             this.Controls.Add(this.hospitalisationControle1);
             this.Controls.Add(this.testControle1);
@@ -221,6 +196,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.close)).EndInit();
@@ -237,14 +213,11 @@
         private System.Windows.Forms.Button hospitalisation;
         private System.Windows.Forms.Button vaccin;
         private System.Windows.Forms.Button carte;
-        private System.Windows.Forms.Button liste;
         private System.Windows.Forms.PictureBox close;
         private citoyenControle citoyenControle1;
         private testControle testControle1;
         private hospitalisationControle hospitalisationControle1;
         private vaccinControle vaccinControle1;
-        private carteControle carteControle1;
-        private listeControle listeControle1;
     }
 }
 

@@ -35,14 +35,13 @@ namespace application_covid19
 
 
         
-        private void enregistrer_Click(object sender, EventArgs e)
+        private void Enregistrer_Click(object sender, EventArgs e)
         {
             if (isValid()) {
                 SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-3ILBI45\SQLEXPRESS;Initial Catalog=covid19;Integrated Security=True;");
                 con.Open();
-                SqlCommand command = new SqlCommand("insert into Citoyen values ('" + cin.Text + "','" + nom.Text + "','" + prenom.Text + "','" + Gender + "','" + age.Text + "','" + zone.Text + "','" + maladie.Text + "')", con);
-
-                command.ExecuteNonQuery();
+                SqlCommand cmd = new SqlCommand("insert into Citoyen values ('" + cin.Text + "','" + nom.Text + "','" + prenom.Text + "','" + Gender + "','" + age.Text + "','" + zone.Text + "','" + maladie.Text + "')", con);
+                cmd.ExecuteNonQuery();
                 MessageBox.Show("les données sont ajoutés avec succés", "Application Covid", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
                 con.Close();
             }
@@ -52,7 +51,6 @@ namespace application_covid19
         private void homme_CheckedChanged(object sender, EventArgs e)
         {
             Gender = "Homme";
-
         }
 
         private void femme_CheckedChanged(object sender, EventArgs e)
@@ -97,6 +95,10 @@ namespace application_covid19
             
         }
 
-
+        private void infoZone_Click(object sender, EventArgs e)
+        {
+            zoneForm form3 = new zoneForm();
+            form3.Show();
+        }
     }
 }
